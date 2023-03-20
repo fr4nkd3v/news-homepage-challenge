@@ -256,7 +256,7 @@ body {
     transform: rotate(45deg) translate(8px, 8px);
   }
   .hamburgerMenu-check:checked ~ .hamburgerMenu-label .hamburgerMenu-line:last-of-type {
-    transform: rotate(-45deg) translate(9px, -9px);
+    transform: rotate(-45deg) translate(9px, -8px);
   }
 
   .hamburgerMenu-button {
