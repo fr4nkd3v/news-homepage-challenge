@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+<body>
+
+  <header class="header">
+    <svg class="header-logo">
+      <use xlink:href="./assets/images/logo.svg#icon" />
+    </svg>
+    
+    <input type="checkbox" class="hamburgerMenu-check" id="hamburgerMenu-check">
+    
+    <label class="hamburgerMenu-label" for="hamburgerMenu-check">
+      <div class="hamburgerMenu-button">
+        <div class="hamburgerMenu-line"></div>
+        <div class="hamburgerMenu-line"></div>
+        <div class="hamburgerMenu-line"></div>
+      </div>
+    </label>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">New</a></li>
+        <li class="nav-item"><a href="#">Popular</a></li>
+        <li class="nav-item"><a href="#">Trending</a></li>
+        <li class="nav-item"><a href="#">Categories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <section class="main-topContent">
+
+      <article class="mainArticle">
+
+        <img class="mainArticle-image" 
+          src="./assets/images/image-web-3-desktop.jpg"
+          srcset="./assets/images/image-web-3-desktop.jpg 1460w, ./assets/images/image-web-3-mobile.jpg 686w" 
+          sizes="(min-width: 700px) 1460px, (max-width: 700px) 686px"
+          alt="web 3.0 image for desktop">
+      
+        <h2 class="mainArticle-title">The Bright Future of Web 3.0?</h2>
+      
+        <div class="mainArticle-info">
+          <p class="mainArticle-description">
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of
+            the
+            people.
+            But is it really fulfilling its promise?
+          </p>
+      
+          <button class="mainArticle-button">
+            Read more
+          </button>
+        </div>
+
+      </article>
+
+      <aside class="asideArticles">
+        <h2 class="asideArticles-title">New</h2>
+        
+        <ul class="asideArticles-list">
+          <li class="asideArticles-article">
+            <h3 class="asideArticles-articleTitle"><a href="#">
+              Hydrogen VS Electric Cars
+            </a></h3>
+            <p class="asideArticles-articleDescription">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </li>
+          <li class="asideArticles-article">
+            <h3 class="asideArticles-articleTitle"><a href="#">
+              The Downsides of AI Artistry
+            </a></h3>
+            <p class="asideArticles-articleDescription">
+              What are the possible adverse effects of on-demand AI image generation?
+            </p>
+          </li>
+          <li class="asideArticles-article">
+            <h3 class="asideArticles-articleTitle"><a href="#">
+              Is VC Funding Drying Up?
+            </a></h3>
+            <p class="asideArticles-articleDescription">
+              Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            </p>
+          </li>
+        </ul>
+        
+      </aside>
+
+    </section>
+
+    <section class="rankedArticles">
+
+      <article class="rankedArticles-article">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="computer retro image" class="rankedArticles-articleImage">
+        <div class="rankedArticles-articleInfo">
+          <span class="rankedArticles-articleNumber">01</span>
+          <h3 class="rankedArticles-articleTitle"><a href="#">
+            Reviving Retro PCs
+          </a></h3>
+          <p class="rankedArticles-articleDescription">
+            What happens when old PCs are given modern upgrades?
+          </p>
+        </div>
+      </article>
+
+      <article class="rankedArticles-article">
+        <img src="./assets/images/image-top-laptops.jpg" alt="keybord laptop image" class="rankedArticles-articleImage">
+        <div class="rankedArticles-articleInfo">
+          <span class="rankedArticles-articleNumber">02</span>
+          <h3 class="rankedArticles-articleTitle"><a href="#">
+            Top 10 Laptops of 2022
+          </a></h3>
+          <p class="rankedArticles-articleDescription">
+            Our best picks for various needs and budgets.
+          </p>
+        </div>
+      </article>
+
+      <article class="rankedArticles-article">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="game controller image" class="rankedArticles-articleImage">
+        <div class="rankedArticles-articleInfo">
+          <span class="rankedArticles-articleNumber">03</span>
+          <h3 class="rankedArticles-articleTitle"><a href="#">
+            The Growth of Gaming
+          </a></h3>
+          <p class="rankedArticles-articleDescription">
+            How the pandemic has sparked fresh opportunities.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/fr4nkd3v" target="_blank">Fr4nkD3v</a>.
+  </div>
+
+  <div class="back-opaque"></div>
+
+  <script>
+    const check = document.querySelector("#hamburgerMenu-check");
+    const backOpaque = document.querySelector(".back-opaque");
+
+    check.checked = false;
+    check.onchange = () => backOpaque.classList.toggle("back-opaque-show")
+  </script>
+</body>
+</html>
